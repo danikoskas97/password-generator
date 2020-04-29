@@ -16,7 +16,7 @@ def generate_password():
 # window config
 window = Tk()
 window.title("Generator Of Password ")
-window.geometry("720x480")
+window.geometry("330x480")
 window.iconbitmap("logo_d.ico")
 window.config(background='#4065A4')
 
@@ -24,8 +24,8 @@ window.config(background='#4065A4')
 frame: Frame = Frame(window, bg='#4065A4')
 
 # create the image
-width = 250
-height = 250
+width = 300
+height = 300
 image = PhotoImage(file='computer.png').zoom(35).subsample(32)
 canvas = Canvas(window, width=width, height=height, bg='#4065A4', bd=0, highlightthickness=0)
 canvas.create_image(width / 2, height / 2, image=image)
@@ -43,8 +43,7 @@ password_entry = Entry(right_frame, font=("Helvetica", 20), bg='#4065A4', fg='wh
 password_entry.pack()
 
 # create the button
-generate_password_button = Button(right_frame, text="Genrate", font=("Helvetica", 20), bg='#4065A4', fg='white',
-                                  command=generate_password)
+generate_password_button = Button(right_frame, text="Generate", font=("Helvetica", 20), bg='#4065A4', fg='white', command=generate_password)
 generate_password_button.pack(fill=X)
 
 # place the sub box right the frame
@@ -64,9 +63,8 @@ window.config(menu=menu_bar)
 
 # show the frame
 frame.grid()
-#problem here why i can`t use
+# problem here why i can`t use
 # frame.pack(expands=YES)
-
 
 # launch the window
 window.mainloop()
