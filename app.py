@@ -5,7 +5,7 @@ from tkinter import *
 
 def generate_password():
     password_min = 7
-    password_max = 13
+    password_max = 14
     all_chars = string.ascii_letters + string.punctuation + string.digits
 
     password = "".join(choice(all_chars) for x in range(randint(password_min, password_max)))
@@ -43,7 +43,7 @@ password_entry = Entry(right_frame, font=("Helvetica", 20), bg='#4065A4', fg='wh
 password_entry.pack()
 
 # create the button
-generate_password_button = Button(right_frame, text="Generate", font=("Helvetica", 20), bg='#4065A4', fg='white', command=generate_password)
+generate_password_button = Button(right_frame, text="Generate", font=("Helvetica", 20), bg='#4065A4', command=generate_password)
 generate_password_button.pack(fill=X)
 
 # place the sub box right the frame
