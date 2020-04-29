@@ -50,8 +50,6 @@ generate_password_button.pack(fill=X)
 # place the sub box right the frame
 right_frame.grid(row=0, column=1, sticky=W)
 
-# show the frame
-frame.pack(expand=YES)
 
 # create menu bar
 menu_bar = Menu(window)
@@ -63,6 +61,11 @@ menu_bar.add_cascade(label="File", menu=file_menu)
 
 # config window to add the menu bar
 window.config(menu=menu_bar)
+
+# show the frame
+frame.grid()
+#problem here why i can`t use
+# frame.pack(expands=YES)
 
 
 # launch the window
